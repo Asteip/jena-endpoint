@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| g                 | pays                           | name                                                      | year | cat        | percent              |
+=============================================================================================================================================================
+|                   | <budget_rd/HR>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/HR>   |      |            | "0.03"^^xsd:double   |
+|                   | <budget_rd/CZ>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/CZ>   |      |            | "1.41 "^^xsd:double  |
+|                   | <budget_rd/LT>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/LT>   |      |            | "0.1 "^^xsd:double   |
+|                   | <budget_rd/IT>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/IT>   |      |            | "0.76 "^^xsd:double  |
+|                   | <budget_rd/ES>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/ES>   |      |            | "1.24 "^^xsd:double  |
+|                   | <budget_rd/FR>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/FR>   |      |            | "7.18"^^xsd:double   |
+|                   | <budget_rd/DK>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/DK>   |      |            | "0.32 "^^xsd:double  |
+|                   | <budget_rd/DE>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/DE>   |      |            | "3.17 "^^xsd:double  |
+|                   | <budget_rd/PL>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/PL>   |      |            | "4.77 "^^xsd:double  |
+|                   | <budget_rd/AT>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/AT>   |      |            | "0.01"^^xsd:double   |
+|                   | <budget_rd/EA19>               | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EA19> |      |            | "2.95"^^xsd:double   |
+|                   | <budget_rd/BE>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/BE>   |      |            | "0.12 "^^xsd:double  |
+|                   | <budget_rd/SE>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/SE>   |      |            | "3.34"^^xsd:double   |
+|                   | <budget_rd/SK>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/SK>   |      |            | "1.28 "^^xsd:double  |
+|                   | <budget_rd/IE>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/IE>   |      |            | "0"^^xsd:double      |
+|                   | <budget_rd/NO>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/NO>   |      |            | "3.83 "^^xsd:double  |
+|                   | <budget_rd/EL>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EL>   |      |            | "0.11 "^^xsd:double  |
+|                   | <budget_rd/HU>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/HU>   |      |            | "0.64 "^^xsd:double  |
+|                   | <budget_rd/UK>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/UK>   |      |            | "16.74"^^xsd:double  |
+|                   | <budget_rd/TR>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/TR>   |      |            | "20.99 "^^xsd:double |
+|                   | <budget_rd/CY>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/CY>   |      |            | "0"^^xsd:double      |
+|                   | <budget_rd/NL>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/NL>   |      |            | "1.22 "^^xsd:double  |
+|                   | <budget_rd/RO>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/RO>   |      |            | "1.61 "^^xsd:double  |
+|                   | <budget_rd/BG>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/BG>   |      |            | "0.1 "^^xsd:double   |
+|                   | <budget_rd/JP>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/JP>   |      |            | "4.36"^^xsd:double   |
+|                   | <budget_rd/PT>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/PT>   |      |            | "0.3"^^xsd:double    |
+|                   | <budget_rd/FI>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/FI>   |      |            | "1.86 "^^xsd:double  |
+|                   | <budget_rd/EE>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EE>   |      |            | "1.48"^^xsd:double   |
+|                   | <budget_rd/SI>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/SI>   |      |            | "0.4 "^^xsd:double   |
+|                   | <budget_rd/RS>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/RS>   |      |            | "3.45 "^^xsd:double  |
+|                   | <budget_rd/MT>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/MT>   |      |            | "0"^^xsd:double      |
+|                   | <budget_rd/US>                 | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/US>   |      |            | "50.92"^^xsd:double  |
+|                   | <budget_rd/EU28>               | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EU28> |      |            | "4.93"^^xsd:double   |
+| <research-graph/> | <research-graph/research/FR>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/FR>   |      | "research" | "1.14"^^xsd:double   |
+| <research-graph/> | <research-graph/research/IE>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/IE>   |      | "research" | "0.97"^^xsd:double   |
+| <research-graph/> | <research-graph/research/LV>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/LV>   |      | "research" | "0.51"^^xsd:double   |
+| <research-graph/> | <research-graph/research/UK>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/UK>   |      | "research" | "1.27"^^xsd:double   |
+| <research-graph/> | <research-graph/research/CZ>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/CZ>   |      | "research" | "1.41"^^xsd:double   |
+| <research-graph/> | <research-graph/research/NO>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/NO>   |      | "research" | "1.88"^^xsd:double   |
+| <research-graph/> | <research-graph/research/EL>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EL>   |      | "research" | "0.79"^^xsd:double   |
+| <research-graph/> | <research-graph/research/RO>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/RO>   |      | "research" | "0.73"^^xsd:double   |
+| <research-graph/> | <research-graph/research/BG>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/BG>   |      | "research" | "0.61"^^xsd:double   |
+| <research-graph/> | <research-graph/research/EA19> | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EA19> |      | "research" | "1.39"^^xsd:double   |
+| <research-graph/> | <research-graph/research/HU>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/HU>   |      | "research" | "0.61"^^xsd:double   |
+| <research-graph/> | <research-graph/research/SI>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/SI>   |      | "research" | "0.85"^^xsd:double   |
+| <research-graph/> | <research-graph/research/BE>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/BE>   |      | "research" | "1.16"^^xsd:double   |
+| <research-graph/> | <research-graph/research/NL>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/NL>   |      | "research" | "1.64"^^xsd:double   |
+| <research-graph/> | <research-graph/research/EU28> | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EU28> |      | "research" | "1.36"^^xsd:double   |
+| <research-graph/> | <research-graph/research/DE>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/DE>   |      | "research" | "1.95"^^xsd:double   |
+| <research-graph/> | <research-graph/research/EE>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/EE>   |      | "research" | "1.75"^^xsd:double   |
+| <research-graph/> | <research-graph/research/LT>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/LT>   |      | "research" | "0.94"^^xsd:double   |
+| <research-graph/> | <research-graph/research/PT>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/PT>   |      | "research" | "2.03"^^xsd:double   |
+| <research-graph/> | <research-graph/research/MT>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/MT>   |      | "research" | "0.64"^^xsd:double   |
+| <research-graph/> | <research-graph/research/AT>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/AT>   |      | "research" | "1.58"^^xsd:double   |
+| <research-graph/> | <research-graph/research/SE>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/SE>   |      | "research" | "1.58"^^xsd:double   |
+| <research-graph/> | <research-graph/research/SK>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/SK>   |      | "research" | "0.8"^^xsd:double    |
+| <research-graph/> | <research-graph/research/PL>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/PL>   |      | "research" | "0.74"^^xsd:double   |
+| <research-graph/> | <research-graph/research/DK>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/DK>   |      | "research" | "1.85"^^xsd:double   |
+| <research-graph/> | <research-graph/research/CY>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/CY>   |      | "research" | "0.84"^^xsd:double   |
+| <research-graph/> | <research-graph/research/IT>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/IT>   |      | "research" | "1"^^xsd:double      |
+| <research-graph/> | <research-graph/research/HR>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/HR>   |      | "research" | "1.77"^^xsd:double   |
+| <research-graph/> | <research-graph/research/FI>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/FI>   |      | "research" | "1.66"^^xsd:double   |
+| <research-graph/> | <research-graph/research/ES>   | <http://dd.eionet.europa.eu/vocabulary/eurostat/geo/ES>   |      | "research" | "1.15"^^xsd:double   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------

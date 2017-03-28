@@ -1,0 +1,41 @@
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+PREFIX budget:  <http://data.europa.eu/budget#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?name ?cat1 ?percent1 ?cat2 ?percent2 ?cat3 ?percent3 ?cat4 ?percent4
+WHERE {
+    ?pays a dbo:country;
+        foaf:name ?name;
+        dbo:budget ?b1;
+        dbo:budget ?b2;
+        dbo:budget ?b3;
+        dbo:budget ?b4.
+
+    ?b1 dbo:budgetYear "2005";
+        dbo:category ?cat1;
+        budget:percent ?percent1.
+
+	?b2 dbo:budgetYear "2005";
+        dbo:category ?cat2;
+        budget:percent ?percent2.
+        
+    ?b3 dbo:budgetYear "2015";
+        dbo:category ?cat3;
+        budget:percent ?percent3.
+        
+    ?b4 dbo:budgetYear "2015";
+        dbo:category ?cat4;
+        budget:percent ?percent4.
+
+    FILTER (?cat1 = "Defense").
+    FILTER (?cat2 = "research").
+    FILTER (?cat3 = "Defense").
+    FILTER (?cat4 = "research").
+    
+    FILTER (?percent1 != -1).
+    FILTER (?percent2 != -1).
+    FILTER (?percent3 != -1).
+    FILTER (?percent4 != -1).
+}
