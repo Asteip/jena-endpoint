@@ -11,23 +11,16 @@ public class Launch {
 		try{
 			// --- CREATION OF GRAPH --- 
 			
-			RdfDataSet dataset = new RdfDataSet(RdfDataSet.BASIC_GRAPH);
-			
-			dataset.addNamedGraph("research-graph/", "research.ttl");
-			dataset.setDefaultGraph("budget_RD.ttl");
-			
-			//dataset.createOwlDataset("budget_RD.ttl", "research.ttl");
+			RdfDataSet dataset = new RdfDataSet("src/main/resources/data/test.nq");
 			
 			// --- EXECUTE QUERY ---
 			
-			dataset.selectQuery("qryTmp.sparql");
+			dataset.displayGraph();
+			//dataset.selectQuery("src/main/resources/qry/qryTest.sparql");
 			
 		}
 		catch(IllegalArgumentException e){
 			System.out.println(e.getStackTrace());
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 
