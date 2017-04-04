@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Iterator;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
@@ -17,7 +18,6 @@ import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.riot.RDFDataMgr;
-import org.apache.jena.tdb.TDBFactory;
 
 public class RdfDataSet {
 
@@ -34,9 +34,15 @@ public class RdfDataSet {
 	 *                the graph type is invalid
 	 */
 	public RdfDataSet(String file) {
-		_dataset = TDBFactory.createDataset();
-
 		Model model = ModelFactory.createDefaultModel();
+		_dataset = RDFDataMgr.loadDataset("src/main/resources/data/test.nq");
+		
+		//Iterator it = dataset.listNames();
+		/*while (it.hasNext()) {
+			String graphName = (String) it.next();
+			//model = dataset.getNamedModel(graphName);
+			System.out.println(graphName + ":" + model.size());
+		}*/
 
 		try {
 			RDFDataMgr.read(_dataset.getDefaultModel(), file);
