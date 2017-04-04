@@ -33,10 +33,20 @@ public class CorrectData {
 
 				// if the sub line is equal to 2 then the line contains only one
 				// quote, we loop until we find the next quote. We also chek if
-				// the
-				// first part of the line contains < or _:
+				// the first part of the line contains < or _:
+				
+				if(subLine.length == 2){
+					if(subLine[0].contains("<") || subLine[0].contains("_:")){
+						nextLine = reader.readLine();
+						
+						if(nextLine != null && nextLine.contains("\"")){
+							
+						}
+					}
+				}
+				
 
-				if (subLine.length == 2 && (subLine[0].contains("<") || subLine[0] .contains("_:"))) {
+				if (subLine.length == 2){
 					while ((nextLine = reader.readLine()) != null && !(nextLine).contains("\"")) {
 						line += nextLine;
 					}
@@ -70,6 +80,18 @@ public class CorrectData {
 		writter.close();
 
 		System.out.println("[INFO] End correction...");
+	}
+	
+	private int nbOccurence(String str, char c){
+		int ret = 0;
+		
+		for (int i = 0 ; i < str.length() ; ++i){
+			if(str.charAt(i) == c){
+				++ret;
+			}
+		}
+		
+		return ret;
 	}
 
 	private String clean(String str) {
