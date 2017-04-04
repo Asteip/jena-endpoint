@@ -13,33 +13,53 @@ import java.util.regex.Pattern;
 public class CorrectData {
 
 	public void fix(String inputFile) throws IOException {
-		
+
 		System.out.println("[INFO] Start correction...");
-		
+
 		// READ DATA
-		
+
 		List<String> lines = new ArrayList<String>();
 		String line = "";
 		String nextLine = "";
+		String resultLine = "";
+		String subLine[] = null;
 
 		FileReader fileReader = new FileReader(inputFile);
 		BufferedReader reader = new BufferedReader(fileReader);
 
 		while (reader.ready()) {
-			line = reader.readLine();
+			if ((line = reader.readLine()) != null) {
+				subLine = line.split("\"");
 
-			while (buggy(line) && (nextLine = reader.readLine()) != null) {
-				line += " " + nextLine;
+				// if the sub line is equal to 2 then the line contains only one
+				// quote, we loop until we find the next quote. We also chek if
+				// the
+				// first part of the line contains < or _:
+
+				if (subLine.length == 2 && (subLine[0].contains("<") || subLine[0] .contains("_:"))) {
+					while ((nextLine = reader.readLine()) != null && !(nextLine).contains("\"")) {
+						line += nextLine;
+					}
+
+					line += nextLine;
+				}
+
+				resultLine = clean(line);
+
+				if (resultLine.charAt(0) != '<' && resultLine.charAt(0) != '_') {
+					// resultLine = "============> \"" + resultLine;
+				} else {
+					lines.add(resultLine);
+				}
 			}
-
-			lines.add(clean(line));
 		}
 
 		fileReader.close();
 
 		// SAVE DATA
-		
-		FileWriter fileWritter = new FileWriter(inputFile);
+
+		FileWriter fileWritter = new FileWriter(
+				"src/main/resources/data/out.nq");
 		BufferedWriter writter = new BufferedWriter(fileWritter);
 
 		for (String data : lines) {
@@ -48,18 +68,19 @@ public class CorrectData {
 		}
 
 		writter.close();
-		
+
 		System.out.println("[INFO] End correction...");
 	}
 
 	private String clean(String str) {
 		String ret = str;
-		
+
 		int indGraph = str.lastIndexOf("<");
 		int indObjectBegin = str.indexOf("\"");
 		int indObjectEnd = str.lastIndexOf("\"");
 
-		if (indGraph != -1 && indObjectBegin != -1 && indObjectEnd != -1 && indObjectBegin < indObjectEnd) {
+		if (indGraph != -1 && indObjectBegin != -1 && indObjectEnd != -1
+				&& indObjectBegin < indObjectEnd) {
 			String subStr[] = str.split("\"");
 
 			String graph = str.substring(indGraph);
@@ -70,24 +91,6 @@ public class CorrectData {
 
 			ret = subStr[0] + "\"" + matcher.replaceAll("") + "\""
 					+ subStr[subStr.length - 1];
-		}
-
-		return ret;
-	}
-
-	private boolean buggy(String str) {
-		int count = 0;
-		boolean ret = false;
-
-		if (str != null || str != "") {
-			Pattern pattern = Pattern.compile("\"");
-			Matcher matcher = pattern.matcher(str);
-
-			while (matcher.find())
-				++count;
-
-			if ((count % 2) != 0)
-				ret = true;
 		}
 
 		return ret;

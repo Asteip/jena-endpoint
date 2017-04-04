@@ -35,21 +35,13 @@ public class RdfDataSet {
 	 */
 	public RdfDataSet(String file) {
 		Model model = ModelFactory.createDefaultModel();
-		_dataset = RDFDataMgr.loadDataset("src/main/resources/data/test.nq");
+		_dataset = RDFDataMgr.loadDataset(file);
 		
-		//Iterator it = dataset.listNames();
-		/*while (it.hasNext()) {
+		Iterator it = _dataset.listNames();
+		while (it.hasNext()) {
 			String graphName = (String) it.next();
-			//model = dataset.getNamedModel(graphName);
+			model = _dataset.getNamedModel(graphName);
 			System.out.println(graphName + ":" + model.size());
-		}*/
-
-		try {
-			RDFDataMgr.read(_dataset.getDefaultModel(), file);
-			_dataset.commit();
-			_dataset.end();
-		} catch (org.apache.jena.riot.RiotException e) {
-			System.out.println("LINE IGNORE");
 		}
 	}
 

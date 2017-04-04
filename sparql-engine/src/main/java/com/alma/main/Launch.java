@@ -1,6 +1,5 @@
 package com.alma.main;
 
-import java.io.IOException;
 import java.util.Iterator;
 
 import org.apache.jena.query.Dataset;
@@ -16,14 +15,27 @@ public class Launch {
 	public static void main(String[] args) {
 		try {
 			// --- CREATION OF GRAPH ---
-			
-			RdfDataSet dataset = new RdfDataSet("src/main/resources/data/test.nq");
+
+			// RdfDataSet dataset = new
+			// RdfDataSet("src/main/resources/data/out.nq");
 
 			// --- EXECUTE QUERY ---
 
 			// dataset.displayGraph();
 			// dataset.selectQuery("src/main/resources/qry/qryTest.sparql");
 
+			Model model = ModelFactory.createDefaultModel();
+			Dataset dataset = RDFDataMgr.loadDataset("src/main/resources/data/out.nq");
+
+			Iterator it = dataset.listNames();
+			while (it.hasNext()) {
+				String graphName = (String) it.next();
+				model = dataset.getNamedModel(graphName);
+				System.out.println(graphName + ":" + model.size());
+			}
+
+			// CorrectData cd = new CorrectData();
+			// cd.fix("src/main/resources/data/data.nq");
 
 		} catch (Exception e) {
 			e.getStackTrace();
