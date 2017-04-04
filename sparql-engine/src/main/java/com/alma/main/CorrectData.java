@@ -36,14 +36,10 @@ public class CorrectData {
 		}
 
 		fileReader.close();
-		
-		for (String data : lines){
-			System.out.println(data);
-		}
 
 		// SAVE DATA
 		
-		/*FileWriter fileWritter = new FileWriter(inputFile);
+		FileWriter fileWritter = new FileWriter(inputFile);
 		BufferedWriter writter = new BufferedWriter(fileWritter);
 
 		for (String data : lines) {
@@ -51,20 +47,23 @@ public class CorrectData {
 			writter.newLine();
 		}
 
-		writter.close();*/
+		writter.close();
 		
 		System.out.println("[INFO] End correction...");
 	}
 
 	private String clean(String str) {
 		String ret = str;
+		
+		int indGraph = str.lastIndexOf("<");
+		int indObjectBegin = str.indexOf("\"");
+		int indObjectEnd = str.lastIndexOf("\"");
 
-		if (str.contains("\"")) {
+		if (indGraph != -1 && indObjectBegin != -1 && indObjectEnd != -1 && indObjectBegin < indObjectEnd) {
 			String subStr[] = str.split("\"");
 
-			String graph = str.substring(str.lastIndexOf("<"));
-			String object = str.substring(str.indexOf("\"") + 1,
-					str.lastIndexOf("\""));
+			String graph = str.substring(indGraph);
+			String object = str.substring(indObjectBegin + 1, indObjectEnd);
 
 			Pattern pattern = Pattern.compile(graph);
 			Matcher matcher = pattern.matcher(object);

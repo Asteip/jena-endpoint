@@ -14,27 +14,19 @@ public class Launch {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//try {
+		try {
 			// --- CREATION OF GRAPH ---
 			
-			//RdfDataSet dataset = new RdfDataSet(
-			//		"src/main/resources/data/test.nq");
+			RdfDataSet dataset = new RdfDataSet("src/main/resources/data/test.nq");
 
 			// --- EXECUTE QUERY ---
 
 			// dataset.displayGraph();
 			// dataset.selectQuery("src/main/resources/qry/qryTest.sparql");
 
-			 CorrectData cd = new CorrectData();
-			 try {
-				cd.fix("src/main/resources/data/data.nq");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 
-		//} catch (Exception e) {
-		//	e.getStackTrace();
-		//}
+		} catch (Exception e) {
+			e.getStackTrace();
+		}
 	}
 }
