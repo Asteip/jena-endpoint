@@ -104,23 +104,35 @@ public class CorrectData {
 				
 				while(!found && i < data.size()){
 					nextLine = data.get(i);
-					nextLines.add(nextLine);
 					
 					if(nextLine.charAt(0) == '<' && nextLine.charAt(0) == '_'){
 						found = true;
+					}
+					else{
+						nextLines.add(nextLine);
 					}
 						
 					++i;
 				}
 				
-				
-				/*String prevLine = result.get(result.size() - 1);
+				String prevLine = result.get(result.size() - 1);
 				String firstPart = prevLine.substring(0,prevLine.lastIndexOf("<") - 1);
 				String secondPart = prevLine.substring(prevLine.lastIndexOf("<"));
-				String object = line.substring(0, line.lastIndexOf("\"") + 1);
-				result.set(result.size() - 1, firstPart + " \"" + object  + secondPart);*/
-				resultLine = "----------> \"" + line;
-			
+				
+				String object = "";
+				
+				// Concat the object
+				for (String str : nextLines){
+					object += str;
+				}
+				
+				// We go to the next line
+				index += nextLines.size() - 1;
+				
+				result.set(result.size() - 1, firstPart + " \"" + object  + secondPart);
+				
+				// We don't add this line because it's buggy
+				resultLine = "";
 			
 			} else {
 				resultLine = line;
