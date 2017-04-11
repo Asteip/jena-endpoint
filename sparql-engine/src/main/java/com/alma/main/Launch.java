@@ -25,7 +25,7 @@ public class Launch {
 			// dataset.selectQuery("src/main/resources/qry/qryTest.sparql");
 
 			/*Model model = ModelFactory.createDefaultModel();
-			Dataset dataset = RDFDataMgr.loadDataset("src/main/resources/data/out.nq");
+			Dataset dataset = RDFDataMgr.loadDataset("src/main/resources/data/out_2.nq");
 
 			Iterator it = dataset.listNames();
 			while (it.hasNext()) {
@@ -34,11 +34,11 @@ public class Launch {
 				System.out.println(graphName + ":" + model.size());
 			}*/
 
-			 CorrectData cd = new CorrectData();
-			 cd.fix("src/main/resources/data/data.nq");
+			CorrectData cd = new CorrectData();
+			cd.run("src/main/resources/data/data.nq", "src/main/resources/data/out_2.nq");
 
 		} catch (Exception e) {
-			e.getStackTrace();
+			e.printStackTrace();
 		}
 	}
 }

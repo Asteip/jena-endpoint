@@ -12,68 +12,33 @@ import java.util.regex.Pattern;
 
 public class CorrectData {
 
-	public void fix(String inputFile) throws IOException {
+	public void run(String inputFile, String outputFile) throws IOException {
+		FileReader fileReader = new FileReader(inputFile);
+		BufferedReader reader = new BufferedReader(fileReader);
+
+		List<String> data = new ArrayList<String>();
+		String rline = "";
 
 		System.out.println("[INFO] Start correction...");
 
 		// READ DATA
 
-		List<String> lines = new ArrayList<String>();
-		String line = "";
-		String nextLine = "";
-		String resultLine = "";
-		String subLine[] = null;
-
-		FileReader fileReader = new FileReader(inputFile);
-		BufferedReader reader = new BufferedReader(fileReader);
-
 		while (reader.ready()) {
-			if ((line = reader.readLine()) != null) {
-				subLine = line.split("\"");
-
-				// if the sub line is equal to 2 then the line contains only one
-				// quote, we loop until we find the next quote. We also chek if
-				// the first part of the line contains < or _:
-				
-				if(subLine.length == 2){
-					if(subLine[0].contains("<") || subLine[0].contains("_:")){
-						nextLine = reader.readLine();
-						
-						if(nextLine != null && nextLine.contains("\"")){
-							
-						}
-					}
-				}
-				
-
-				if (subLine.length == 2){
-					while ((nextLine = reader.readLine()) != null && !(nextLine).contains("\"")) {
-						line += nextLine;
-					}
-
-					line += nextLine;
-				}
-
-				resultLine = clean(line);
-
-				if (resultLine.charAt(0) != '<' && resultLine.charAt(0) != '_') {
-					// resultLine = "============> \"" + resultLine;
-				} else {
-					lines.add(resultLine);
-				}
-			}
+			if ((rline = reader.readLine()) != null)
+				data.add(rline);
 		}
 
 		fileReader.close();
 
 		// SAVE DATA
-
-		FileWriter fileWritter = new FileWriter(
-				"src/main/resources/data/out.nq");
+		
+		FileWriter fileWritter = new FileWriter(outputFile);
 		BufferedWriter writter = new BufferedWriter(fileWritter);
+		
+		List<String> fixedData = fix(data);
 
-		for (String data : lines) {
-			writter.write(data);
+		for (String wline : fixedData) {			
+			writter.write(wline);
 			writter.newLine();
 		}
 
@@ -81,19 +46,120 @@ public class CorrectData {
 
 		System.out.println("[INFO] End correction...");
 	}
-	
-	private int nbOccurence(String str, char c){
+
+	private List<String> fix(List<String> data) {
+		List<String> result = new ArrayList<String>();
+		List<String> nextLines = new ArrayList<String>();
+		int index = 0;
+		boolean found = false;
+
+		while (index < data.size()) {			
+			String line = data.get(index);
+			String resultLine = "";
+			
+			// If the line contains only one double quote, we look if there
+			// is the end of the object in the next lines. Otherwise, we add
+			// a double quote.
+
+			if (nbDoubleQuote(line) == 1 && (line.charAt(0) == '<' || line.charAt(0) == '_')){
+				// Adding the current line
+				nextLines.add(line);
+				
+				int i = index + 1;
+				String nextLine = "";
+				
+				while (!found && i < data.size()) {
+					nextLine = data.get(i);
+					nextLines.add(nextLine);
+					
+					if(nbDoubleQuote(nextLine) > 0){
+						found = true;
+					}
+					
+					++i;
+				}
+
+				if (nbDoubleQuote(nextLine) == 1){
+						
+					// Concat each next line with the current line.
+					for (String str : nextLines){
+						resultLine += str;
+					}
+					
+					// We go to the next line which contains the single double quote
+					index += nextLines.size() - 1;
+
+				} else {
+					
+					// Adding a double quote at the end of the object
+					String firstPart = line.substring(0,line.lastIndexOf("<") - 1);
+					String secondPart = line.substring(line.lastIndexOf("<"));
+					resultLine = firstPart + "\" " + secondPart;
+				}
+			} else if(line.charAt(0) != '<' && line.charAt(0) != '_'){	
+				nextLines.add(line);
+				
+				int i = index + 1;
+				String nextLine = "";
+				
+				while(!found && i < data.size()){
+					nextLine = data.get(i);
+					nextLines.add(nextLine);
+					
+					if(nextLine.charAt(0) == '<' && nextLine.charAt(0) == '_'){
+						found = true;
+					}
+						
+					++i;
+				}
+				
+				
+				/*String prevLine = result.get(result.size() - 1);
+				String firstPart = prevLine.substring(0,prevLine.lastIndexOf("<") - 1);
+				String secondPart = prevLine.substring(prevLine.lastIndexOf("<"));
+				String object = line.substring(0, line.lastIndexOf("\"") + 1);
+				result.set(result.size() - 1, firstPart + " \"" + object  + secondPart);*/
+				resultLine = "----------> \"" + line;
+			
+			
+			} else {
+				resultLine = line;
+			}
+			
+			if(resultLine != "")
+				result.add(clean(resultLine));
+			
+			nextLines.clear();
+			found = false;
+			++index;
+		}
+
+		return result;
+	}
+
+	/*
+	 * Returns the number of occurences of the character "
+	 */
+	private int nbDoubleQuote(String str) {
 		int ret = 0;
-		
-		for (int i = 0 ; i < str.length() ; ++i){
-			if(str.charAt(i) == c){
-				++ret;
+
+		for (int i = 0; i < str.length(); ++i) {			
+			if (str.charAt(i) == '"'){
+				if(i > 0  && str.charAt(i-1) != '\\'){
+					++ret;
+				}
+				else if(i == 0){
+					++ret;
+				}
 			}
 		}
-		
+
 		return ret;
 	}
 
+	/*
+	 * Remove all occurences of the graph string in the line.
+	 */
 	private String clean(String str) {
 		String ret = str;
 
@@ -103,6 +169,7 @@ public class CorrectData {
 
 		if (indGraph != -1 && indObjectBegin != -1 && indObjectEnd != -1
 				&& indObjectBegin < indObjectEnd) {
+
 			String subStr[] = str.split("\"");
 
 			String graph = str.substring(indGraph);
