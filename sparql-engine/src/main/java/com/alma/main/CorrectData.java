@@ -72,6 +72,7 @@ public class CorrectData {
 					nextLine = data.get(i);
 					nextLines.add(nextLine);
 					
+					// We stop if the last line added contains a double quote
 					if(nbDoubleQuote(nextLine) > 0){
 						found = true;
 					}
@@ -97,7 +98,7 @@ public class CorrectData {
 					resultLine = firstPart + "\" " + secondPart;
 				}
 			} else if(line.charAt(0) != '<' && line.charAt(0) != '_'){	
-				nextLines.add(line);
+				nextLines.add(line.substring(0,line.lastIndexOf("<")));
 				
 				int i = index + 1;
 				String nextLine = "";
@@ -105,16 +106,19 @@ public class CorrectData {
 				while(!found && i < data.size()){
 					nextLine = data.get(i);
 					
-					if(nextLine.charAt(0) == '<' && nextLine.charAt(0) == '_'){
+					// In this case we don't add the last line because it contains a 
+					// correct line.
+					if(nextLine.charAt(0) == '<' || nextLine.charAt(0) == '_'){
 						found = true;
 					}
 					else{
-						nextLines.add(nextLine);
+						nextLines.add(nextLine.substring(0, nextLine.lastIndexOf("<")));
 					}
 						
 					++i;
 				}
 				
+				// We take the last line we added in the result list 
 				String prevLine = result.get(result.size() - 1);
 				String firstPart = prevLine.substring(0,prevLine.lastIndexOf("<") - 1);
 				String secondPart = prevLine.substring(prevLine.lastIndexOf("<"));
@@ -126,13 +130,13 @@ public class CorrectData {
 					object += str;
 				}
 				
-				// We go to the next line
-				index += nextLines.size() - 1;
-				
-				result.set(result.size() - 1, firstPart + " \"" + object  + secondPart);
+				result.set(result.size() - 1, clean(firstPart + " \"" + object  + secondPart));
 				
 				// We don't add this line because it's buggy
 				resultLine = "";
+				
+				// We go to the next line
+				index += nextLines.size() - 1;
 			
 			} else {
 				resultLine = line;
@@ -176,22 +180,19 @@ public class CorrectData {
 		String ret = str;
 
 		int indGraph = str.lastIndexOf("<");
-		int indObjectBegin = str.indexOf("\"");
-		int indObjectEnd = str.lastIndexOf("\"");
 
-		if (indGraph != -1 && indObjectBegin != -1 && indObjectEnd != -1
-				&& indObjectBegin < indObjectEnd) {
-
-			String subStr[] = str.split("\"");
+		if (indGraph != -1) {
 
 			String graph = str.substring(indGraph);
-			String object = str.substring(indObjectBegin + 1, indObjectEnd);
+			String toClean = str.substring(0, indGraph);
 
 			Pattern pattern = Pattern.compile(graph);
-			Matcher matcher = pattern.matcher(object);
-
-			ret = subStr[0] + "\"" + matcher.replaceAll("") + "\""
-					+ subStr[subStr.length - 1];
+			Matcher matcher = pattern.matcher(toClean);
+			
+			if(nbDoubleQuote(toClean) == 1)
+				ret = matcher.replaceAll("") + "\""	+ graph;
+			else
+				ret = matcher.replaceAll("") + graph;
 		}
 
 		return ret;
