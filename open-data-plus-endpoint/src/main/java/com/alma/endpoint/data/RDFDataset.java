@@ -1,4 +1,4 @@
-package com.alma.endpoint.control;
+package com.alma.endpoint.data;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,30 +19,20 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.riot.RDFDataMgr;
 
-public class RdfDataSet {
+public class RDFDataset {
 
 	private Dataset _dataset;
 
 	// CONSTRUCTOR
 
 	/**
-	 * Create a dataset with default empty graph.
+	 * Creates a dataset from a data file.
 	 * 
-	 * @param graphType
-	 *            the type of graph stored in the dataset (Basic or inferred).
-	 * @exception if
-	 *                the graph type is invalid
+	 * @param fileName
+	 *            The name of the file which contains data
 	 */
-	public RdfDataSet(String file) {
-		Model model = ModelFactory.createDefaultModel();
-		_dataset = RDFDataMgr.loadDataset(file);
-		
-		Iterator it = _dataset.listNames();
-		while (it.hasNext()) {
-			String graphName = (String) it.next();
-			model = _dataset.getNamedModel(graphName);
-			System.out.println(graphName + ":" + model.size());
-		}
+	public RDFDataset(String fileName) {
+		_dataset = RDFDataMgr.loadDataset(fileName);
 	}
 
 	// PRIVATES METHODS
@@ -50,11 +40,10 @@ public class RdfDataSet {
 	/*
 	 * Return the contents of a file in a string for a query.
 	 */
-	private String readQryFile(String filename) throws IOException {
-		File file = new File(filename);
+	private String readQryFile(String fileName) throws IOException {
+		File file = new File(fileName);
 		FileInputStream inputStream = new FileInputStream(file);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(
-				inputStream));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		StringBuilder data = new StringBuilder();
 		String line;
 
@@ -69,15 +58,21 @@ public class RdfDataSet {
 	// PUBLICS METHODS
 
 	/**
-	 * Print the graph specify by the uri in Turtle format to the standard
-	 * output.
-	 * 
-	 * @param uri
-	 *            the uri of the graph. If the uri does not exist or is null,
-	 *            the default graph is display
+	 * Debug method, print all named graph with their size.
 	 */
 	public void displayGraph() {
-		_dataset.getDefaultModel().write(System.out);
+		Model model = ModelFactory.createDefaultModel();
+		int totalSize = 0;
+
+		Iterator<String> it = _dataset.listNames();
+		while (it.hasNext()) {
+			String graphName = (String) it.next();
+			model = _dataset.getNamedModel(graphName);
+			System.out.println(graphName + " : " + model.size());
+			totalSize += model.size();
+		}
+
+		System.out.println("--- Total size : " + totalSize);
 	}
 
 	/**
@@ -88,12 +83,12 @@ public class RdfDataSet {
 	 * @throws IOException
 	 *             if the file is invalid
 	 */
-	public void selectQuery(String filename) throws IOException {
-		String request = readQryFile(filename);
+	public void selectQuery(String input, String output) throws IOException {
+		String request = readQryFile(input);
 
-		System.out.println("\n-> Request on file: \"" + filename + "\"");
+		System.out.println("\n[INFO] Request on file: \"" + input + "\"");
 		System.out.println(request);
-		System.out.println("-> Perform request...\n");
+		System.out.println("[INFO] Perform request...\n");
 
 		Query query = QueryFactory.create(request);
 		QueryExecution qexec = QueryExecutionFactory.create(query, _dataset);
@@ -104,10 +99,12 @@ public class RdfDataSet {
 		File file = null;
 
 		try {
-			file = new File("out");
+			file = new File(output);
 			fop = new FileOutputStream(file);
+
 			if (!file.exists())
 				file.createNewFile();
+
 			ResultSetFormatter.out(fop, results, query);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -119,6 +116,6 @@ public class RdfDataSet {
 		// Important - free up resources used running the query
 		qexec.close();
 
-		System.out.println("-> Done.\n");
+		System.out.println("[INFO] Done.\n");
 	}
 }
