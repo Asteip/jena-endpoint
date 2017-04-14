@@ -1,4 +1,4 @@
-package com.alma.main;
+package com.alma.endpoint;
 
 import java.util.Iterator;
 
@@ -25,7 +25,7 @@ public class Launch {
 			// dataset.selectQuery("src/main/resources/qry/qryTest.sparql");
 
 			Model model = ModelFactory.createDefaultModel();
-			Dataset dataset = RDFDataMgr.loadDataset("src/main/resources/data/out_2.nq");
+			Dataset dataset = RDFDataMgr.loadDataset("src/main/resources/data/data_2015-fixed.nq");
 
 			Iterator it = dataset.listNames();
 			while (it.hasNext()) {

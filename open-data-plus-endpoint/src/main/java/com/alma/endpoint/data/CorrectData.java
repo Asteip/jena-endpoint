@@ -1,4 +1,4 @@
-package com.alma.main;
+package com.alma.endpoint.data;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
