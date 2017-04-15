@@ -1,11 +1,13 @@
 package com.alma.endpoint.data;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Iterator;
 
 import org.apache.jena.query.Dataset;
@@ -21,41 +23,26 @@ import org.apache.jena.riot.RDFDataMgr;
 
 public class RDFDataset {
 
-	private Dataset _dataset;
-
-	// CONSTRUCTOR
+	private Dataset dataset;
+	private String dataFileName;
 
 	/**
-	 * Creates a dataset from a data file.
+	 * Creates new instance of RDFDataset
+	 */
+	public RDFDataset() {
+		dataFileName = "";
+	}
+
+	/**
+	 * Loads a dataset from a data file.
 	 * 
 	 * @param fileName
-	 *            The name of the file which contains data
+	 *            The name of the file which contains data.
 	 */
-	public RDFDataset(String fileName) {
-		_dataset = RDFDataMgr.loadDataset(fileName);
+	public void loadDataset(String fileName) {
+		dataFileName = fileName;
+		dataset = RDFDataMgr.loadDataset(fileName);
 	}
-
-	// PRIVATES METHODS
-
-	/*
-	 * Return the contents of a file in a string for a query.
-	 */
-	private String readQryFile(String fileName) throws IOException {
-		File file = new File(fileName);
-		FileInputStream inputStream = new FileInputStream(file);
-		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-		StringBuilder data = new StringBuilder();
-		String line;
-
-		while ((line = reader.readLine()) != null) {
-			data.append(line + "\n");
-		}
-
-		inputStream.close();
-		return data.toString();
-	}
-
-	// PUBLICS METHODS
 
 	/**
 	 * Debug method, print all named graph with their size.
@@ -64,10 +51,10 @@ public class RDFDataset {
 		Model model = ModelFactory.createDefaultModel();
 		int totalSize = 0;
 
-		Iterator<String> it = _dataset.listNames();
+		Iterator<String> it = dataset.listNames();
 		while (it.hasNext()) {
 			String graphName = (String) it.next();
-			model = _dataset.getNamedModel(graphName);
+			model = dataset.getNamedModel(graphName);
 			System.out.println(graphName + " : " + model.size());
 			totalSize += model.size();
 		}
@@ -78,44 +65,73 @@ public class RDFDataset {
 	/**
 	 * Execute select query.
 	 * 
-	 * @param filename
-	 *            the file which contains the query
+	 * @param query
+	 *            The query string.
 	 * @throws IOException
-	 *             if the file is invalid
+	 *             if the file is invalid.
 	 */
-	public void selectQuery(String input, String output) throws IOException {
-		String request = readQryFile(input);
+	public String selectQuery(String strQuery) {
+		String strResult = "";
 
-		System.out.println("\n[INFO] Request on file: \"" + input + "\"");
-		System.out.println(request);
-		System.out.println("[INFO] Perform request...\n");
-
-		Query query = QueryFactory.create(request);
-		QueryExecution qexec = QueryExecutionFactory.create(query, _dataset);
-		ResultSet results = qexec.execSelect();
-
-		// Output query results
-		FileOutputStream fop = null;
-		File file = null;
-
-		try {
-			file = new File(output);
-			fop = new FileOutputStream(file);
-
-			if (!file.exists())
-				file.createNewFile();
-
-			ResultSetFormatter.out(fop, results, query);
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (fop != null)
-				fop.close();
-		}
-
-		// Important - free up resources used running the query
+		Query query = QueryFactory.create(strQuery);
+		QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
+		ResultSet qresult = qexec.execSelect();
+		strResult = ResultSetFormatter.asText(qresult, query);
 		qexec.close();
 
-		System.out.println("[INFO] Done.\n");
+		return strResult;
+	}
+
+	/**
+	 * Read a query from a file.
+	 * 
+	 * @param fileName
+	 *            The file name.
+	 * @return The query string
+	 * @throws IOException
+	 */
+	public String readTextFile(File file) throws IOException {
+		FileInputStream fip = new FileInputStream(file);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(fip));
+
+		StringBuilder data = new StringBuilder();
+		String line;
+
+		while ((line = reader.readLine()) != null) {
+			data.append(line + "\n");
+		}
+
+		fip.close();
+
+		return data.toString();
+	}
+
+	/**
+	 * Write a query result into a file.
+	 * 
+	 * @param fileName
+	 *            The file name.
+	 * @param result
+	 *            The string query result.
+	 * @throws IOException
+	 */
+	public void writeTextFile(File file, String result) throws IOException {
+		FileOutputStream fop = new FileOutputStream(file);
+		BufferedWriter writter = new BufferedWriter(new OutputStreamWriter(fop));
+
+		writter.write(result);
+		writter.close();
+
+		if (fop != null)
+			fop.close();
+	}
+
+	/**
+	 * Returns the current loaded data file name.
+	 * 
+	 * @return The data file name.
+	 */
+	public String getDataFileName() {
+		return dataFileName;
 	}
 }
