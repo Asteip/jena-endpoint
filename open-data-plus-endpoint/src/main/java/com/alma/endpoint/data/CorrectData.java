@@ -194,6 +194,13 @@ public class CorrectData {
 			else
 				ret = matcher.replaceAll("") + graph;
 		}
+		
+		if (ret.contains("@fr_fr")){
+			Pattern pattern = Pattern.compile("@fr_fr");
+			Matcher matcher = pattern.matcher(ret);
+			
+			ret = matcher.replaceAll("@fr");
+		}
 
 		return ret;
 	}
