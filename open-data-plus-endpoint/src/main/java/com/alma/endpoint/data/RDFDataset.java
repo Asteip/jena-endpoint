@@ -25,12 +25,14 @@ public class RDFDataset {
 
 	private Dataset dataset;
 	private String dataFileName;
+	private boolean isLoaded;
 
 	/**
 	 * Creates new instance of RDFDataset
 	 */
 	public RDFDataset() {
 		dataFileName = "";
+		isLoaded = false;
 	}
 
 	/**
@@ -42,6 +44,7 @@ public class RDFDataset {
 	public void loadDataset(String fileName) {
 		dataFileName = fileName;
 		dataset = RDFDataMgr.loadDataset(fileName);
+		isLoaded = true;
 	}
 
 	/**
@@ -63,23 +66,56 @@ public class RDFDataset {
 	}
 
 	/**
-	 * Execute select query.
+	 * Execute select query and return the string result.
 	 * 
 	 * @param query
 	 *            The query string.
+	 * @return The result of the query
 	 * @throws IOException
 	 *             if the file is invalid.
 	 */
-	public String selectQuery(String strQuery) {
+	public String selectQueryAsText(String strQuery) {
 		String strResult = "";
-
 		Query query = QueryFactory.create(strQuery);
+
 		QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
-		ResultSet qResult = qexec.execSelect();
-		strResult = ResultSetFormatter.asText(qResult, query);
+		ResultSet resultSet = qexec.execSelect();
+		strResult = ResultSetFormatter.asText(resultSet, query);
+
 		qexec.close();
 
 		return strResult;
+	}
+
+	/**
+	 * Execute select query and store it in csv file.
+	 * 
+	 * @param strQuery
+	 *            The query string.
+	 * @param outputFile
+	 *            The file where the result is stored (.csv).
+	 * @throws IOException
+	 */
+	public void selectQueryAsCsv(String strQuery, File outputFile) throws IOException {
+		Query query = QueryFactory.create(strQuery);
+
+		QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
+		ResultSet resultSet = qexec.execSelect();
+
+		// Output query results in csv format
+
+		FileOutputStream fop = new FileOutputStream(outputFile);
+
+		if (!outputFile.exists())
+			outputFile.createNewFile();
+
+		ResultSetFormatter.outputAsCSV(fop, resultSet);
+
+		if (fop != null)
+			fop.close();
+
+		qexec.close();
+
 	}
 
 	/**
@@ -133,5 +169,14 @@ public class RDFDataset {
 	 */
 	public String getDataFileName() {
 		return dataFileName;
+	}
+
+	/**
+	 * Returns the state of the dataset.
+	 * 
+	 * @return True if a dataset is loaded, false otherwise.
+	 */
+	public boolean isLoaded() {
+		return isLoaded;
 	}
 }

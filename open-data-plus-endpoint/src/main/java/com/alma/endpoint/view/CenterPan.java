@@ -36,6 +36,7 @@ public class CenterPan extends JPanel {
 	private JPanel resultToolsPan;
 	private JLabel resultLabel;
 	private JButton resultExportTxtButton;
+	private JButton resultExportCsvButton;
 	private JScrollPane resultTextScrollPan;
 	private JTextArea resultTextArea;
 
@@ -86,10 +87,12 @@ public class CenterPan extends JPanel {
 		resultToolsPan = new JPanel();
 		resultLabel = new JLabel("Result");
 		resultExportTxtButton = new JButton("Export (.txt)");
+		resultExportCsvButton = new JButton("Export (.csv)");
 		
 		resultToolsPan.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 		resultToolsPan.add(resultLabel);
 		resultToolsPan.add(resultExportTxtButton);
+		resultToolsPan.add(resultExportCsvButton);
 
 		resultTextArea = new JTextArea();
 		resultTextArea.setEditable(false);
@@ -117,6 +120,10 @@ public class CenterPan extends JPanel {
 
 	public JButton getResultExportTxtButton() {
 		return resultExportTxtButton;
+	}
+
+	public JButton getResultExportCsvButton() {
+		return resultExportCsvButton;
 	}
 
 	public JTextArea getQryTextArea() {

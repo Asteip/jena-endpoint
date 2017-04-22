@@ -56,6 +56,9 @@ public class UserEvent implements ActionListener {
 
 		if (src == view.getCenterPan().getResultExportTxtButton())
 			resultExportTxtButtonEvent();
+
+		if (src == view.getCenterPan().getResultExportCsvButton())
+			resultExportCsvButtonEvent();
 	}
 
 	// PRIVATES METHODS
@@ -67,6 +70,7 @@ public class UserEvent implements ActionListener {
 		view.getCenterPan().getQrySaveButton().addActionListener(this);
 		view.getCenterPan().getDataCleanButton().addActionListener(this);
 		view.getCenterPan().getResultExportTxtButton().addActionListener(this);
+		view.getCenterPan().getResultExportCsvButton().addActionListener(this);
 	}
 
 	private void newDataFileButtonEvent() {
@@ -94,17 +98,18 @@ public class UserEvent implements ActionListener {
 			dataFileName = loadedDataFile.get(index).getPath();
 			query = view.getCenterPan().getQryTextArea().getText();
 
-			if (!dataset.getDataFileName().equals(dataFileName)) {
-				try {
-					dataset.loadDataset(dataFileName);
-				} catch (Exception e) {
-					view.getCenterPan().getResultTextArea().setForeground(Color.RED);
-					view.getCenterPan().getResultTextArea().setText(e.getMessage());
-				}
-			}
-
 			if (query != null && !query.trim().equals("")) {
-				result = dataset.selectQuery(query);
+
+				if (!dataset.getDataFileName().equals(dataFileName)) {
+					try {
+						dataset.loadDataset(dataFileName);
+					} catch (Exception e) {
+						view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+						view.getCenterPan().getResultTextArea().setText(e.getMessage());
+					}
+				}
+
+				result = dataset.selectQueryAsText(query);
 				view.getCenterPan().getResultTextArea().setForeground(Color.BLACK);
 				view.getCenterPan().getResultTextArea().setText(result);
 			} else {
@@ -166,7 +171,7 @@ public class UserEvent implements ActionListener {
 		int index = -1;
 		String dataFileName = "";
 		String dataFileNameRes = "";
-		
+
 		if (!view.getLeftPan().getDataFileList().isSelectionEmpty()) {
 			index = view.getLeftPan().getDataFileList().getSelectedIndex();
 			dataFileName = loadedDataFile.get(index).getPath();
@@ -188,27 +193,56 @@ public class UserEvent implements ActionListener {
 	}
 
 	private void resultExportTxtButtonEvent() {
-		String result = view.getCenterPan().getResultTextArea().getText();
+		if (dataset.isLoaded()) {
+			String result = view.getCenterPan().getResultTextArea().getText();
 
-		try {
-			JFileChooser fc = view.getResultFc();
-			int returnVal = fc.showSaveDialog(view);
+			try {
+				JFileChooser fc = view.getResultFc();
+				int returnVal = fc.showSaveDialog(view);
 
-			if (returnVal == JFileChooser.APPROVE_OPTION && result != "") {
-				File file = fc.getSelectedFile();
+				if (returnVal == JFileChooser.APPROVE_OPTION && result != "") {
+					File file = fc.getSelectedFile();
 
-				if (FilenameUtils.getExtension(file.getPath()).equalsIgnoreCase("txt")) {
-					dataset.writeTextFile(file, result);
-				} else {
-					File tmpFile = new File(file.getParentFile(), FilenameUtils.getBaseName(file.getName()) + ".txt");
+					if (FilenameUtils.getExtension(file.getPath()).equalsIgnoreCase("txt")) {
+						dataset.writeTextFile(file, result);
+					} else {
+						File tmpFile = new File(file.getParentFile(),
+								FilenameUtils.getBaseName(file.getName()) + ".txt");
 
-					dataset.writeTextFile(tmpFile, result);
-
+						dataset.writeTextFile(tmpFile, result);
+					}
 				}
+			} catch (IOException e) {
+				view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+				view.getCenterPan().getResultTextArea().setText(e.getMessage());
 			}
-		} catch (IOException e) {
-			view.getCenterPan().getResultTextArea().setForeground(Color.RED);
-			view.getCenterPan().getResultTextArea().setText(e.getMessage());
+		}
+	}
+
+	private void resultExportCsvButtonEvent() {
+		if (dataset.isLoaded()) {
+			String query = view.getCenterPan().getQryTextArea().getText();
+
+			try {
+				JFileChooser fc = view.getResultFc();
+				int returnVal = fc.showSaveDialog(view);
+
+				// Check if the query was run
+				if (returnVal == JFileChooser.APPROVE_OPTION && !query.trim().equals("")) {
+					File file = fc.getSelectedFile();
+
+					if (FilenameUtils.getExtension(file.getPath()).equalsIgnoreCase("csv")) {
+						dataset.selectQueryAsCsv(query, file);
+					} else {
+						File tmpFile = new File(file.getParentFile(),
+								FilenameUtils.getBaseName(file.getName()) + ".csv");
+						dataset.selectQueryAsCsv(query, tmpFile);
+					}
+				}
+			} catch (IOException e) {
+				view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+				view.getCenterPan().getResultTextArea().setText(e.getMessage());
+			}
 		}
 	}
 }
