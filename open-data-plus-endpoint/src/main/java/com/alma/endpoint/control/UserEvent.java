@@ -1,5 +1,6 @@
 package com.alma.endpoint.control;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -12,6 +13,7 @@ import javax.swing.JOptionPane;
 
 import org.apache.commons.io.FilenameUtils;
 
+import com.alma.endpoint.data.CleanData;
 import com.alma.endpoint.data.RDFDataset;
 import com.alma.endpoint.view.MainView;
 
@@ -23,10 +25,13 @@ public class UserEvent implements ActionListener {
 	private List<File> loadedDataFile;
 	private File loadedQueryFile;
 
+	private CleanData cleanData;
+
 	public UserEvent() {
 		view = new MainView();
 		dataset = new RDFDataset();
 		loadedDataFile = new ArrayList<File>();
+		cleanData = new CleanData();
 		initListener();
 	}
 
@@ -46,6 +51,9 @@ public class UserEvent implements ActionListener {
 		if (src == view.getCenterPan().getQrySaveButton())
 			qrySaveButtonEvent();
 
+		if (src == view.getCenterPan().getDataCleanButton())
+			dataCleanButtonEvent();
+
 		if (src == view.getCenterPan().getResultExportTxtButton())
 			resultExportTxtButtonEvent();
 	}
@@ -57,6 +65,7 @@ public class UserEvent implements ActionListener {
 		view.getCenterPan().getQryRunButton().addActionListener(this);
 		view.getCenterPan().getQryOpenButton().addActionListener(this);
 		view.getCenterPan().getQrySaveButton().addActionListener(this);
+		view.getCenterPan().getDataCleanButton().addActionListener(this);
 		view.getCenterPan().getResultExportTxtButton().addActionListener(this);
 	}
 
@@ -89,12 +98,14 @@ public class UserEvent implements ActionListener {
 				try {
 					dataset.loadDataset(dataFileName);
 				} catch (Exception e) {
-					e.printStackTrace();
+					view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+					view.getCenterPan().getResultTextArea().setText(e.getMessage());
 				}
 			}
 
 			if (query != null && !query.trim().equals("")) {
 				result = dataset.selectQuery(query);
+				view.getCenterPan().getResultTextArea().setForeground(Color.BLACK);
 				view.getCenterPan().getResultTextArea().setText(result);
 			} else {
 				JOptionPane.showMessageDialog(null, "No query", "Error", JOptionPane.ERROR_MESSAGE);
@@ -115,7 +126,8 @@ public class UserEvent implements ActionListener {
 			try {
 				view.getCenterPan().getQryTextArea().setText(dataset.readTextFile(loadedQueryFile));
 			} catch (IOException e) {
-				e.printStackTrace();
+				view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+				view.getCenterPan().getResultTextArea().setText(e.getMessage());
 			}
 		}
 	}
@@ -145,7 +157,33 @@ public class UserEvent implements ActionListener {
 				}
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+			view.getCenterPan().getResultTextArea().setText(e.getMessage());
+		}
+	}
+
+	private void dataCleanButtonEvent() {
+		int index = -1;
+		String dataFileName = "";
+		String dataFileNameRes = "";
+		
+		if (!view.getLeftPan().getDataFileList().isSelectionEmpty()) {
+			index = view.getLeftPan().getDataFileList().getSelectedIndex();
+			dataFileName = loadedDataFile.get(index).getPath();
+			dataFileNameRes = dataFileName.replaceAll(".nq", "-fixed.nq");
+
+			try {
+				view.getCenterPan().getResultTextArea().setForeground(Color.BLACK);
+				view.getCenterPan().getResultTextArea().setText("[INFO] Start correction...\n");
+				cleanData.run(dataFileName, dataFileNameRes);
+				view.getCenterPan().getResultTextArea().append("[INFO] End correction.");
+			} catch (IOException e) {
+				view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+				view.getCenterPan().getResultTextArea().setText(e.getMessage());
+			}
+
+		} else {
+			JOptionPane.showMessageDialog(null, "No file selected", "Error", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
@@ -162,15 +200,15 @@ public class UserEvent implements ActionListener {
 				if (FilenameUtils.getExtension(file.getPath()).equalsIgnoreCase("txt")) {
 					dataset.writeTextFile(file, result);
 				} else {
-					File tmpFile = new File(file.getParentFile(),
-							FilenameUtils.getBaseName(file.getName()) + ".txt");
+					File tmpFile = new File(file.getParentFile(), FilenameUtils.getBaseName(file.getName()) + ".txt");
 
 					dataset.writeTextFile(tmpFile, result);
 
 				}
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			view.getCenterPan().getResultTextArea().setForeground(Color.RED);
+			view.getCenterPan().getResultTextArea().setText(e.getMessage());
 		}
 	}
 }

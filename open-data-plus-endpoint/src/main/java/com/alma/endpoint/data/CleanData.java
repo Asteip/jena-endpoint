@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CorrectData {
+public class CleanData {
 
 	public void run(String inputFile, String outputFile) throws IOException {
 		FileReader fileReader = new FileReader(inputFile);
@@ -18,8 +18,6 @@ public class CorrectData {
 
 		List<String> data = new ArrayList<String>();
 		String rline = "";
-
-		System.out.println("[INFO] Start correction...");
 
 		// READ DATA
 
@@ -43,8 +41,6 @@ public class CorrectData {
 		}
 
 		writter.close();
-
-		System.out.println("[INFO] End correction...");
 	}
 
 	private List<String> fix(List<String> data) {

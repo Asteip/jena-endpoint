@@ -25,9 +25,11 @@ public class CenterPan extends JPanel {
 
 	private JPanel qryToolsPan;
 	private JLabel qryLabel;
+	private JLabel dataLabel;
 	private JButton qryRunButton;
 	private JButton qrySaveButton;
 	private JButton qryOpenButton;
+	private JButton dataCleanButton;
 	private JScrollPane qryTextScrollPan;
 	private JTextArea qryTextArea;
 
@@ -61,12 +63,17 @@ public class CenterPan extends JPanel {
 		qryRunButton = new JButton("Run");
 		qrySaveButton = new JButton("Save");
 		qryOpenButton = new JButton("Open");
+		
+		dataLabel = new JLabel("Data");
+		dataCleanButton = new JButton("Clean");
 
 		qryToolsPan.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 		qryToolsPan.add(qryLabel);
 		qryToolsPan.add(qryRunButton);
 		qryToolsPan.add(qryOpenButton);
 		qryToolsPan.add(qrySaveButton);
+		qryToolsPan.add(dataLabel);
+		qryToolsPan.add(dataCleanButton);
 
 		qryTextArea = new JTextArea();
 		qryTextScrollPan = new JScrollPane(qryTextArea);
@@ -104,6 +111,10 @@ public class CenterPan extends JPanel {
 		return qryOpenButton;
 	}
 
+	public JButton getDataCleanButton() {
+		return dataCleanButton;
+	}
+
 	public JButton getResultExportTxtButton() {
 		return resultExportTxtButton;
 	}
@@ -114,6 +125,5 @@ public class CenterPan extends JPanel {
 
 	public JTextArea getResultTextArea() {
 		return resultTextArea;
-	}
-	
+	}	
 }
