@@ -75,8 +75,8 @@ public class RDFDataset {
 
 		Query query = QueryFactory.create(strQuery);
 		QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
-		ResultSet qresult = qexec.execSelect();
-		strResult = ResultSetFormatter.asText(qresult, query);
+		ResultSet qResult = qexec.execSelect();
+		strResult = ResultSetFormatter.asText(qResult, query);
 		qexec.close();
 
 		return strResult;
@@ -111,15 +111,15 @@ public class RDFDataset {
 	 * 
 	 * @param fileName
 	 *            The file name.
-	 * @param result
+	 * @param text
 	 *            The string query result.
 	 * @throws IOException
 	 */
-	public void writeTextFile(File file, String result) throws IOException {
+	public void writeTextFile(File file, String text) throws IOException {
 		FileOutputStream fop = new FileOutputStream(file);
 		BufferedWriter writter = new BufferedWriter(new OutputStreamWriter(fop));
 
-		writter.write(result);
+		writter.write(text);
 		writter.close();
 
 		if (fop != null)

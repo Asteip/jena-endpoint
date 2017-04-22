@@ -20,129 +20,157 @@ public class UserEvent implements ActionListener {
 	private RDFDataset dataset;
 	private MainView view;
 
-	private List<File> loadedFile;
-	private File loadedQuery;
+	private List<File> loadedDataFile;
+	private File loadedQueryFile;
 
 	public UserEvent() {
 		view = new MainView();
 		dataset = new RDFDataset();
-		loadedFile = new ArrayList<File>();
+		loadedDataFile = new ArrayList<File>();
 		initListener();
-	}
-
-	private void initListener() {
-		view.getLeftPan().getNewDataFileButton().addActionListener(this);
-		view.getCenterPan().getQryRunButton().addActionListener(this);
-		view.getCenterPan().getQrySaveButton().addActionListener(this);
-		view.getCenterPan().getQryOpenButton().addActionListener(this);
-		view.getCenterPan().getResultSaveButton().addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		Object src = event.getSource();
 
-		// New data file button
+		if (src == view.getLeftPan().getNewDataFileButton())
+			newDataFileButtonEvent();
 
-		if (src == view.getLeftPan().getNewDataFileButton()) {
-			JFileChooser fc = view.getNqDataFileFc();
-			int returnVal = fc.showOpenDialog(view);
+		if (src == view.getCenterPan().getQryRunButton())
+			qryRunButtonEvent();
 
-			if (returnVal == JFileChooser.APPROVE_OPTION) {
-				File selectedFile = fc.getSelectedFile();
+		if (src == view.getCenterPan().getQryOpenButton())
+			qryOpenButtonEvent();
 
-				if (!loadedFile.contains(selectedFile)) {
-					loadedFile.add(selectedFile);
-					view.getLeftPan().addDataFile(selectedFile.getName());
-				}
+		if (src == view.getCenterPan().getQrySaveButton())
+			qrySaveButtonEvent();
+
+		if (src == view.getCenterPan().getResultExportTxtButton())
+			resultExportTxtButtonEvent();
+	}
+
+	// PRIVATES METHODS
+
+	private void initListener() {
+		view.getLeftPan().getNewDataFileButton().addActionListener(this);
+		view.getCenterPan().getQryRunButton().addActionListener(this);
+		view.getCenterPan().getQryOpenButton().addActionListener(this);
+		view.getCenterPan().getQrySaveButton().addActionListener(this);
+		view.getCenterPan().getResultExportTxtButton().addActionListener(this);
+	}
+
+	private void newDataFileButtonEvent() {
+		JFileChooser fc = view.getNqDataFileFc();
+		int returnVal = fc.showOpenDialog(view);
+
+		if (returnVal == JFileChooser.APPROVE_OPTION) {
+			File selectedFile = fc.getSelectedFile();
+
+			if (!loadedDataFile.contains(selectedFile)) {
+				loadedDataFile.add(selectedFile);
+				view.getLeftPan().addDataFile(selectedFile.getName());
 			}
 		}
+	}
 
-		// Run query button
+	private void qryRunButtonEvent() {
+		int index = -1;
+		String dataFileName = "";
+		String query = "";
+		String result = "";
 
-		if (src == view.getCenterPan().getQryRunButton()) {
-			int index = -1;
-			String dataFileName = "";
-			String query = "";
-			String queryResult = "";
+		if (!view.getLeftPan().getDataFileList().isSelectionEmpty()) {
+			index = view.getLeftPan().getDataFileList().getSelectedIndex();
+			dataFileName = loadedDataFile.get(index).getPath();
+			query = view.getCenterPan().getQryTextArea().getText();
 
-			if (!view.getLeftPan().getDataFileList().isSelectionEmpty()) {
-				index = view.getLeftPan().getDataFileList().getSelectedIndex();
-				dataFileName = loadedFile.get(index).getPath();
-				query = view.getCenterPan().getQryTextArea().getText();
-
-				if (!dataset.getDataFileName().equals(dataFileName)) {
-					try {
-						dataset.loadDataset(dataFileName);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-
-				if (query != null && !query.trim().equals("")) {
-					queryResult = dataset.selectQuery(query);
-					view.getCenterPan().getResultTextArea().setText(queryResult);
-				} else {
-					JOptionPane.showMessageDialog(null, "No query", "Error", JOptionPane.ERROR_MESSAGE);
-				}
-
-			} else {
-				JOptionPane.showMessageDialog(null, "No file selected", "Error", JOptionPane.ERROR_MESSAGE);
-			}
-		}
-
-		// Open query button
-
-		if (src == view.getCenterPan().getQryOpenButton()) {
-			JFileChooser fc = view.getSparqlQueryFc();
-			int returnVal = fc.showOpenDialog(view);
-
-			if (returnVal == JFileChooser.APPROVE_OPTION) {
-				loadedQuery = fc.getSelectedFile();
-
+			if (!dataset.getDataFileName().equals(dataFileName)) {
 				try {
-					view.getCenterPan().getQryTextArea().setText(dataset.readTextFile(loadedQuery));
-				} catch (IOException e) {
+					dataset.loadDataset(dataFileName);
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
+
+			if (query != null && !query.trim().equals("")) {
+				result = dataset.selectQuery(query);
+				view.getCenterPan().getResultTextArea().setText(result);
+			} else {
+				JOptionPane.showMessageDialog(null, "No query", "Error", JOptionPane.ERROR_MESSAGE);
+			}
+
+		} else {
+			JOptionPane.showMessageDialog(null, "No file selected", "Error", JOptionPane.ERROR_MESSAGE);
 		}
+	}
 
-		// Save query button
+	private void qryOpenButtonEvent() {
+		JFileChooser fc = view.getSparqlQueryFc();
+		int returnVal = fc.showOpenDialog(view);
 
-		if (src == view.getCenterPan().getQrySaveButton()) {
-			String query = view.getCenterPan().getQryTextArea().getText();
+		if (returnVal == JFileChooser.APPROVE_OPTION) {
+			loadedQueryFile = fc.getSelectedFile();
 
 			try {
-				if (loadedQuery != null) {
-					dataset.writeTextFile(loadedQuery, query);
-				} else {
-					JFileChooser fc = view.getSparqlQueryFc();
-					int returnVal = fc.showSaveDialog(view);
-					
-					if (returnVal == JFileChooser.APPROVE_OPTION && query != "") {
-						loadedQuery = fc.getSelectedFile();
-
-						if (FilenameUtils.getExtension(loadedQuery.getPath()).equalsIgnoreCase("sparql")) {
-							dataset.writeTextFile(loadedQuery, query);
-						} else {
-							File tmpFile = new File(loadedQuery.getParentFile(),
-									FilenameUtils.getBaseName(loadedQuery.getName()) + ".sparql");
-
-							dataset.writeTextFile(tmpFile, query);
-
-						}
-					}
-				}
+				view.getCenterPan().getQryTextArea().setText(dataset.readTextFile(loadedQueryFile));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
+	}
 
-		// Save result button
+	private void qrySaveButtonEvent() {
+		String query = view.getCenterPan().getQryTextArea().getText();
 
-		if (src == view.getCenterPan().getResultSaveButton()) {
+		try {
+			if (loadedQueryFile != null) {
+				dataset.writeTextFile(loadedQueryFile, query);
+			} else {
+				JFileChooser fc = view.getSparqlQueryFc();
+				int returnVal = fc.showSaveDialog(view);
 
+				if (returnVal == JFileChooser.APPROVE_OPTION && query != "") {
+					loadedQueryFile = fc.getSelectedFile();
+
+					if (FilenameUtils.getExtension(loadedQueryFile.getPath()).equalsIgnoreCase("sparql")) {
+						dataset.writeTextFile(loadedQueryFile, query);
+					} else {
+						File tmpFile = new File(loadedQueryFile.getParentFile(),
+								FilenameUtils.getBaseName(loadedQueryFile.getName()) + ".sparql");
+
+						dataset.writeTextFile(tmpFile, query);
+
+					}
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void resultExportTxtButtonEvent() {
+		String result = view.getCenterPan().getResultTextArea().getText();
+
+		try {
+			JFileChooser fc = view.getResultFc();
+			int returnVal = fc.showSaveDialog(view);
+
+			if (returnVal == JFileChooser.APPROVE_OPTION && result != "") {
+				File file = fc.getSelectedFile();
+
+				if (FilenameUtils.getExtension(file.getPath()).equalsIgnoreCase("txt")) {
+					dataset.writeTextFile(file, result);
+				} else {
+					File tmpFile = new File(file.getParentFile(),
+							FilenameUtils.getBaseName(file.getName()) + ".txt");
+
+					dataset.writeTextFile(tmpFile, result);
+
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }
