@@ -176,19 +176,21 @@ public class CleanData {
 		String ret = str;
 
 		int indGraph = str.lastIndexOf("<");
+		int indObject = str.indexOf("\"");
 
-		if (indGraph != -1) {
-
+		if (indGraph != -1 && indObject != -1) {
+			
+			String startStr = str.substring(0, indObject);
+			String toClean = str.substring(indObject, indGraph);
 			String graph = str.substring(indGraph);
-			String toClean = str.substring(0, indGraph);
 
 			Pattern pattern = Pattern.compile(graph);
 			Matcher matcher = pattern.matcher(toClean);
 			
 			if(nbDoubleQuote(toClean) == 1)
-				ret = matcher.replaceAll("") + "\""	+ graph;
+				ret = startStr + matcher.replaceAll("") + "\""	+ graph;
 			else
-				ret = matcher.replaceAll("") + graph;
+				ret = startStr + matcher.replaceAll("") + graph;
 		}
 		
 		if (ret.contains("@fr_fr")){
