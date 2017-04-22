@@ -32,6 +32,7 @@ public class UserEvent implements ActionListener {
 		dataset = new RDFDataset();
 		loadedDataFile = new ArrayList<File>();
 		cleanData = new CleanData();
+		
 		initListener();
 	}
 
@@ -50,6 +51,9 @@ public class UserEvent implements ActionListener {
 
 		if (src == view.getCenterPan().getQrySaveButton())
 			qrySaveButtonEvent();
+		
+		if (src == view.getCenterPan().getQryNewButton())
+			qryNewButtonEvent();
 
 		if (src == view.getCenterPan().getDataCleanButton())
 			dataCleanButtonEvent();
@@ -68,6 +72,7 @@ public class UserEvent implements ActionListener {
 		view.getCenterPan().getQryRunButton().addActionListener(this);
 		view.getCenterPan().getQryOpenButton().addActionListener(this);
 		view.getCenterPan().getQrySaveButton().addActionListener(this);
+		view.getCenterPan().getQryNewButton().addActionListener(this);
 		view.getCenterPan().getDataCleanButton().addActionListener(this);
 		view.getCenterPan().getResultExportTxtButton().addActionListener(this);
 		view.getCenterPan().getResultExportCsvButton().addActionListener(this);
@@ -165,6 +170,11 @@ public class UserEvent implements ActionListener {
 			view.getCenterPan().getResultTextArea().setForeground(Color.RED);
 			view.getCenterPan().getResultTextArea().setText(e.getMessage());
 		}
+	}
+	
+	private void qryNewButtonEvent(){
+		loadedQueryFile = null;
+		view.getCenterPan().getQryTextArea().setText("");
 	}
 
 	private void dataCleanButtonEvent() {

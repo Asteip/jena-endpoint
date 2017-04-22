@@ -1,0 +1,19 @@
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?g ?country (COUNT(*) AS ?count)
+WHERE
+{
+	
+	GRAPH ?g { 
+		?s vcard:country-name ?country.
+		FILTER NOT EXISTS {
+      			FILTER (regex(?country, "France","i")) . 
+		}
+     	
+	} 
+
+}
+GROUP BY ?g ?country

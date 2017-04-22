@@ -1,0 +1,494 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+| g                                                                                                                  | country                     | count |
+============================================================================================================================================================
+| <http://www.lectra.com/en/global-network>                                                                          | "Peru"                      | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "South Africa"              | 3     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Ethiopia"                  | 2     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "Belgium"                   | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Belgium"                   | 2     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "United Kingdom"            | 15    |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Pakistan"                  | 1     |
+| <http://www.cmigroupe.com/en/p/acid-regeneration-plants>                                                           | "China"                     | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Germany"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Austria"                   | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Switzerland"               | 102   |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "Brazil"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Switzerland"               | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Turkey"                    | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Australia"                 | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Ireland"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Turkey"                    | 3     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Guatemala"                 | 1     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "United States"             | 4     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "China"                     | 2     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "India"                     | 6     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Thailand"                  | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Ghana"                     | 1     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "Germany"                   | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "India"                     | 8     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "Australia"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Singapore"                 | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Bulgaria"                  | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Japan"                     | 2     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "Germany"                   | 4     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "Netherlands"               | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Netherlands"               | 2     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Germany"                   | 3     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "United States"             | 8     |
+| <http://www.ticketnetwork.com/ticket/ryan-lewis-events.aspx?page=2>                                                | "Netherlands"               | 1     |
+| <http://www.ticketnetwork.com/ticket/ryan-lewis-events.aspx?page=2>                                                | "Germany"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Peru"                      | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Italy"                     | 2     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "United States"             | 6     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Israel"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Bangladesh"                | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Russia"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Singapore"                 | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Malaysia"                  | 1     |
+| <http://www.touristlink.com/europe/cat/it-and-industrial-parks.html>                                               | "Austria"                   | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Kazakhstan"                | 2     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "Russia"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Norway"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Portugal"                  | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Bahrain"                   | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Croatia"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Ukraine"                   | 6     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "Portugal"                  | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Japan"                     | 9     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Taiwan"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Portugal"                  | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Tunisia"                   | 2     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Denmark"                   | 2     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Turkey"                    | 3     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Malaysia"                  | 1     |
+| <http://www.tourmapr.com/artist/Heidevolk>                                                                         | "Poland"                    | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "India"                     | 3     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "Italy"                     | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "United States"             | 2     |
+| <http://www.ticketnetwork.com/tickets/macklemore-tickets.aspx?page=2>                                              | "Switzerland"               | 2     |
+| <http://www.ticketnetwork.com/ticket/one-world-theatre-events.aspx?vid=1016&page=2>                                | "Canada"                    | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "United Kingdom"            | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Colombia"                  | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Chile"                     | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Brazil"                    | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Latvia"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Chile"                     | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Brazil"                    | 8     |
+| <http://www.ticketnetwork.com/ticket/ryan-lewis-events.aspx?page=2>                                                | "Italy"                     | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Germany"                   | 11    |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Netherlands"               | 4     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "United Kingdom"            | 3     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Argentina"                 | 2     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Luxembourg"                | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Spain"                     | 7     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Finland"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Ecuador"                   | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Sweden"                    | 1     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Japan"                     | 1     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "Germany"                   | 2     |
+| <http://www.ticketnetwork.com/ticket/world-events.aspx?page=2>                                                     | "Canada"                    | 1     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "United States"             | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Poland"                    | 3     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Perú"                      | 1     |
+| <http://www.touristlink.com/europe/cat/it-and-industrial-parks.html>                                               | "Denmark"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Colombia"                  | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Morocco"                   | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Canada"                    | 6     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Canada"                    | 111   |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Slovakia"                  | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Libya"                     | 2     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "Singapore"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Australia"                 | 3     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Denmark"                   | 1     |
+| <http://www.ticketnetwork.com/ticket/disney-events.aspx?page=2>                                                    | "United Kingdom"            | 2     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Mexico"                    | 2     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Australia"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "USA"                       | 14    |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Venezuela"                 | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Switzerland"               | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Hong Kong"                 | 1     |
+| <http://www.last.fm/label/Thunderstruck/events>                                                                    | "Finland"                   | 1     |
+| <http://www.ticketsinventory.com/concert/k-s-choice-tickets/>                                                      | "Netherlands"               | 3     |
+| <http://www.ticketsinventory.com/concert/k-s-choice-tickets/>                                                      | "Germany"                   | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Australia"                 | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Romania"                   | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "China, PRC"                | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Canada"                    | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Italy"                     | 3     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Belgium"                   | 5     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "United Kingdom"            | 3     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "United Kingdom"            | 2     |
+| <http://www.ticketnetwork.com/ticket/disney-events.aspx?page=2>                                                    | "Spain"                     | 1     |
+| <http://www.ticketnetwork.com/ticket/disney-events.aspx?page=3>                                                    | "United Kingdom"            | 3     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "Belgium"                   | 26    |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Korea"                     | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Romania"                   | 3     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Barbados"                  | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Colombia"                  | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Jamaica"                   | 2     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Ireland"                   | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "China"                     | 5     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Denmark"                   | 3     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "Italy"                     | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Republic of Korea"         | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Croatia"                   | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Japan"                     | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Ukraine"                   | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Portugal"                  | 8     |
+| <http://www.last.fm/label/Thunderstruck/events>                                                                    | "Belgium"                   | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Tunisia"                   | 6     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "China"                     | 2     |
+| <http://www.scconline.org/referrals/cat/consultants/>                                                              | "Germany"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Ghana"                     | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "India"                     | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Angola"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Bulgaria"                  | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Malaysia"                  | 3     |
+| <http://www.grassrootsfeminism.net/cms/taxonomy/term/120?page=10>                                                  | "Canada"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Singapore"                 | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Sweden"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "India"                     | 2     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Japan"                     | 86    |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Japan"                     | 2     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "United Kingdom"            | 3     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "South Africa"              | 3     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Estonia"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Switzerland"               | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Germany"                   | 12    |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Netherlands"               | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Bangladesh"                | 3     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Canada"                    | 3     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Singapore"                 | 3     |
+| <http://www.touristlink.com/europe/cat/it-and-industrial-parks.html>                                               | "Malta"                     | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Malaysia"                  | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "United States"             | 9     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Portugal"                  | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Norway"                    | 3     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Croatia"                   | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Norway"                    | 1     |
+| <http://www.last.fm/label/Thunderstruck/events>                                                                    | "Netherlands"               | 3     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Italy"                     | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Austria"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "South Korea"               | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "United States"             | 18    |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "South Africa"              | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Denmark"                   | 2     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Turkey"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Switzerland"               | 2     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "United States"             | 1     |
+| <http://www.scconline.org/referrals/cat/consultants/>                                                              | "Belgium"                   | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Greece"                    | 1     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Netherlands"               | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Turkey"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Malta"                     | 1     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "Luxembourg"                | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Germany"                   | 4     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Belgium"                   | 2     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Taiwan"                    | 2     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "The Netherlands"           | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Peru"                      | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "South Africa"              | 8     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Peru"                      | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Singapore"                 | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Pakistan"                  | 3     |
+| <http://www.acappella-online.de/en/tracker/full?page=32>                                                           | "Germany"                   | 53    |
+| <http://www.acappella-online.de/en/tracker/full?page=32>                                                           | "Netherlands"               | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Brazil"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Romania"                   | 5     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Bahrain"                   | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Denmark"                   | 1     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Germany"                   | 3     |
+| <http://www.last.fm/label/Thunderstruck/events>                                                                    | "Italy"                     | 1     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "United States"             | 3     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Ecuador"                   | 3     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Canada"                    | 2     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Austria"                   | 4     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Russian Federation"        | 2     |
+| <http://www.ticketnetwork.com/ticket/one-world-theatre-events.aspx?vid=1016&page=2>                                | "Poland"                    | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Spain"                     | 2     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Italy"                     | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Romania"                   | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Denmark"                   | 13    |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Italy"                     | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Denmark"                   | 2     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Greece"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Australia"                 | 2     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Czech Republic"            | 2     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "China"                     | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Australia"                 | 3     |
+| <http://www.cmigroupe.com/en/p/acid-regeneration-plants>                                                           | "United States"             | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Brazil"                    | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Canada"                    | 3     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Jordan"                    | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Bulgaria"                  | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Chile"                     | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "United Kingdom"            | 6     |
+| <http://www.cmigroupe.com/en/p/acid-regeneration-plants>                                                           | "Germany"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Hong Kong"                 | 3     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Brazil"                    | 2     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Finland"                   | 1     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "United Kingdom"            | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Poland"                    | 1     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "Poland"                    | 1     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "Turkey"                    | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Morocco"                   | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Colombia"                  | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Iraq"                      | 2     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Colombia"                  | 7     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "Mexico"                    | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Mexico"                    | 2     |
+| <http://www.ticketnetwork.com/tickets/macklemore-tickets.aspx?page=2>                                              | "Austria"                   | 2     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Poland"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Chile"                     | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Turkmenistan"              | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Chile"                     | 3     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Spain"                     | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "China"                     | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Norway"                    | 1     |
+| <http://www.acappella-online.de/en/tracker/full?page=32>                                                           | "United Kingdom"            | 1     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Ireland"                   | 1     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Spain"                     | 2     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Switzerland"               | 15    |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Australia"                 | 2     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Canada"                    | 12    |
+| <http://www.lectra.com/en/global-network>                                                                          | "Brazil"                    | 6     |
+| <http://www.last.fm/label/Thunderstruck/events>                                                                    | "Spain"                     | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "United Arab Emirates"      | 1     |
+| <http://www.cmigroupe.com/en/p/cmi-defence>                                                                        | "Belgium"                   | 1     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Mexico"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Sweden"                    | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "The Netherlands"           | 5     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Iceland"                   | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Czech Republic"            | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Estonia"                   | 1     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "Brazil"                    | 6     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Germany"                   | 11    |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Netherlands"               | 12    |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Germany"                   | 1     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "United States"             | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Estonia"                   | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "United States"             | 2     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Bulgaria"                  | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Russia"                    | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Thailand"                  | 3     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Italy"                     | 2     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Turkey"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Netherlands"               | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Germany"                   | 1     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "United Kingdom"            | 3     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "Germany"                   | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Turkey"                    | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "United States"             | 333   |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Israel"                    | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "México"                    | 3     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Finland"                   | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Saudi Arabia"              | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Greece"                    | 4     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Ireland"                   | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Great Britain"             | 3     |
+| <http://www.ticketnetwork.com/ticket/disney-on-ice-events.aspx?page=2>                                             | "Canada"                    | 5     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Portugal"                  | 2     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "Singapore"                 | 1     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "New Caledonia"             | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "India"                     | 1     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "Italy"                     | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Belgium"                   | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Hungary"                   | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "United Kingdom"            | 15    |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Korea, Republic of"        | 1     |
+| <http://www.ticketnetwork.com/ticket/ryan-lewis-events.aspx?page=2>                                                | "Switzerland"               | 2     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "China"                     | 2     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Japan"                     | 2     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Australia"                 | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Greece"                    | 1     |
+| <http://www.ticketnetwork.com/tickets/macklemore-tickets.aspx?page=2>                                              | "Italy"                     | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Switzerland"               | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Belgium"                   | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Cambodia"                  | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Mexico"                    | 5     |
+| <http://www.cmigroupe.com/en/p/acid-regeneration-plants>                                                           | "India"                     | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Spain"                     | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Luxembourg"                | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Argentina"                 | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Russian Federation"        | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Hong Kong S.A.R., China"   | 1     |
+| <http://www.ticketnetwork.com/tickets/disney-on-ice-tickets.aspx>                                                  | "Canada"                    | 5     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "Brazil"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Equatorial Guinea"         | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Viet Nam"                  | 3     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Mozambique"                | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Egypt"                     | 2     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Denmark"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Philippines"               | 3     |
+| <http://www.tourmapr.com/artist/Taake>                                                                             | "US"                        | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Colombia"                  | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Estonia"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Czech Republic"            | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Australia"                 | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Switzerland"               | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Venezuela"                 | 3     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "New Zealand"               | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "United Kingdom"            | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Canada"                    | 2     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "Germany"                   | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Taiwan, Province of China" | 1     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "United Kingdom"            | 1     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "United States"             | 4     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Slovakia"                  | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "United Kingdom"            | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Lithuania"                 | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Belgium"                   | 5     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "United Kingdom"            | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Argentina"                 | 3     |
+| <http://www.ticketnetwork.com/ticket/disney-events.aspx?page=2>                                                    | "Canada"                    | 3     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Sri Lanka"                 | 3     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Hong Kong"                 | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "China"                     | 2     |
+| <http://www.marcospecialties.com/ordering-policies/international-ordering/?yr=2012&month=3&dy=>                    | "USA"                       | 4     |
+| <http://www.ticketnetwork.com/tickets/macklemore-tickets.aspx?page=2>                                              | "Netherlands"               | 1     |
+| <http://www.ticketnetwork.com/tickets/macklemore-tickets.aspx?page=2>                                              | "Germany"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "United Arab Emirates"      | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Ivory Coast"               | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "New Zealand"               | 2     |
+| <http://www.acappella-online.de/en/tracker/full?page=32>                                                           | "Denmark"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Finland"                   | 3     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Sweden"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Indonesia"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Indonesia"                 | 4     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "China"                     | 2     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "Australia"                 | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Mexico"                    | 3     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Algeria"                   | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Poland"                    | 3     |
+| <http://www.ticketnetwork.com/ticket/world-events.aspx?page=2>                                                     | "United Kingdom"            | 2     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Argentina"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Russia"                    | 1     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Russia"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Mexico"                    | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "United States"             | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "China"                     | 9     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Italy"                     | 9     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Israel"                    | 2     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "Italy"                     | 1     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Germany"                   | 11    |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Netherlands"               | 4     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Italy"                     | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Finland"                   | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Vietnam"                   | 1     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "Russia"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Qatar"                     | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Uruguay"                   | 1     |
+| <http://www.cmigroupe.com/en/p/acid-regeneration-plants>                                                           | "Brazil"                    | 1     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "United Kingdom"            | 2     |
+| <http://www.labelsandlabeling.com/suppliers>                                                                       | "China"                     | 2     |
+| <http://www.touristlink.com/europe/cat/it-and-industrial-parks.html>                                               | "Germany"                   | 3     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Belgium"                   | 3     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Korea, Republic of"        | 3     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Germany"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Saudi Arabia"              | 1     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Denmark"                   | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Mauritius"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Nigeria"                   | 3     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Singapore"                 | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Belgium"                   | 1     |
+| <http://www.ticketnetwork.com/ticket/ryan-lewis-events.aspx?page=2>                                                | "Austria"                   | 2     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Brazil"                    | 1     |
+| <http://www.touristlink.com/europe/cat/it-and-industrial-parks.html>                                               | "Sweden"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Greece"                    | 2     |
+| <http://www.ticketnetwork.com/ticket/disney-on-ice-events.aspx?page=2>                                             | "Poland"                    | 4     |
+| <http://www.acappella-online.de/en/tracker/full?page=32>                                                           | "Switzerland"               | 11    |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Sweden"                    | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Thailand"                  | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Netherlands"               | 3     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Germany"                   | 3     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Taiwan"                    | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Dominican Republic"        | 1     |
+| <http://www.labelsandlabeling.com/suppliers?companyid=1331>                                                        | "Turkey"                    | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Norway"                    | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "United States"             | 6     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Estonia"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Lebanon"                   | 1     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Italy"                     | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Belgium"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Trinidad and Tobago"       | 1     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Australia"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Bolivia"                   | 1     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Portugal"                  | 1     |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Switzerland"               | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "United States"             | 9     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Switzerland"               | 1     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=186&title_1=&field_country_value=or&country=All&keys=> | "Japan"                     | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Germany"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Netherlands"               | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Japan"                     | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Sweden"                    | 3     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Israel"                    | 6     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Norway"                    | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "China"                     | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Indonesia"                 | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Italy"                     | 3     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "United States"             | 6     |
+| <http://www.tourmapr.com/artist/Taake>                                                                             | "Netherlands"               | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Belgium"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "United Kingdom"            | 3     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Germany"                   | 4     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Netherlands"               | 1     |
+| <http://www.ticketnetwork.com/tickets/disney-on-ice-tickets.aspx>                                                  | "Poland"                    | 4     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "China"                     | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Senegal"                   | 1     |
+| <http://www.cmigroupe.com/en/contact>                                                                              | "India"                     | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "China"                     | 3     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Spain"                     | 2     |
+| <http://www.ticketnetwork.com/ticket/disney-events.aspx?page=2>                                                    | "Poland"                    | 3     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Mexico"                    | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Vietnam"                   | 1     |
+| <http://www.ticketsinventory.com/concert/k-s-choice-tickets/>                                                      | "Austria"                   | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Russia"                    | 12    |
+| <http://www.last.fm/label/Baeble+Media+LLC/events>                                                                 | "Canada"                    | 2     |
+| <http://www.touristlink.com/europe/cat/it-and-industrial-parks.html>                                               | "Spain"                     | 2     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Canada"                    | 2     |
+| <http://www.grassrootsfeminism.net/cms/taxonomy/term/120?page=10>                                                  | "Belgium"                   | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Finland"                   | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Poland"                    | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Italy"                     | 2     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Indonesia"                 | 3     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Australia"                 | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Costa Rica"                | 1     |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "USA"                       | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Mexico"                    | 15    |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Egypt"                     | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Slovakia"                  | 3     |
+| <http://www.last.fm/label/Umvd+Import/events/2003>                                                                 | "Canada"                    | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Argentina"                 | 1     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Sri Lanka"                 | 1     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Spain"                     | 1     |
+| <http://www.gaydavineyards.com/en/where-to-buy-our-wines>                                                          | "Germany"                   | 4     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Ireland"                   | 1     |
+| <http://www.labelsandlabeling.com/suppliers/m?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Belgium"                   | 1     |
+| <http://undergrad.admissions.columbia.edu/visit/international>                                                     | "Italy"                     | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "United Kingdom"            | 3     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Argentina"                 | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Taiwan, Province of China" | 3     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Luxembourg"                | 2     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "Argentina"                 | 18    |
+| <http://www.invista.com/en/inside-invista/global-locations-map.html>                                               | "Brazil"                    | 2     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Viet Nam"                  | 1     |
+| <http://www.ondata.es/recuperar/contactenos.htm>                                                                   | "Colombia"                  | 2     |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "United Kingdom"            | 1     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Romania"                   | 1     |
+| <http://www.scconline.org/referrals/cat/consultants/>                                                              | "Canada"                    | 3     |
+| <http://www.labelsandlabeling.com/suppliers/a?tid_op=or&tid=113&title_1=&field_country_value=or&country=All&keys=> | "Singapore"                 | 1     |
+| <http://www.tenaris.com/en/ContactUs.aspx>                                                                         | "United Arab Emirates"      | 1     |
+| <http://www.grassrootsfeminism.net/cms/taxonomy/term/120?page=10>                                                  | "United States"             | 7     |
+| <http://www.lectra.com/en/global-network?p_contactval=customers>                                                   | "Philippines"               | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Cambodia"                  | 3     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "Czech Republic"            | 2     |
+| <https://www.scantool.net/scantool/distributors/>                                                                  | "Denmark"                   | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Spain"                     | 3     |
+| <http://www.crestron.eu/?q=ru/i2p-partner/integrierte-partner-programm>                                            | "Greece"                    | 1     |
+| <http://www.televes.es/cat/empresa/redcomercial/filial-internacional>                                              | "United Arab Emirates"      | 1     |
+| <http://www.lectra.com/en/global-network>                                                                          | "Russian Federation"        | 3     |
+| <http://www.crestron.eu/?q=en/i2p-partner/integrierte-partner-programm>                                            | "Austria"                   | 4     |
+| <http://www.genuineguidegear.com/dealers>                                                                          | "New Zealand"               | 11    |
+| <http://www.orange-business.com/en/where-we-are>                                                                   | "Slovakia"                  | 1     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------
