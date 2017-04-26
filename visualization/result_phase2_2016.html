@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Open Data Plus</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  </head>
-  <body>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8" />
+  <title>Semantic graph</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,21 +24,25 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-			<li><a href="final_2012.html">Final result 2012</a></li>
-			<li><a href="final_2016.html">Final result 2016</a></li>
+          <li><a href="final_2012.html">Final result 2012</a></li>
+        <li><a href="final_2016.html">Final result 2016</a></li>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 
   <div class="container">
     <div class="row">
-      <h1>Browse visualizations for Open Data +</h1>
-      <ul>
-        <li><a href="final_2012.html">Final result 2012</a></li>
-        <li><a href="result_phase2_2016.html">Result stage 2 (2016)</a></li>
-        <li><a href="final_2016.html">Final result 2016</a></li>
-      </ul>
+      <h1>Domains related to Nantes</h1>
+      <div class="well">
+        <p><strong>Domain:</strong> <span id="tooltip-text"></span></p>
+        <p><strong>Number of NQuads:</strong> <span id="tooltip-occ"></span></p>
+      </div>
+      <svg></svg>
     </div>
   </div>
-  </body>
-</html>
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+  <script type="text/javascript" src="phase2_2016.js"></script>
+</body>
