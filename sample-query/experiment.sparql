@@ -2,12 +2,12 @@ PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX schema: <http://schema.org/>
+PREFIX icaltzd: <http://www.w3.org/2002/12/cal/icaltzd#>
 
-SELECT DISTINCT ?g ?organization 
+SELECT DISTINCT ?g ?summary
 WHERE
 {
 	GRAPH ?g { 
-		?s vcard:organization-name ?organization.
-		
+		?s icaltzd:summary ?summary
 	}
 }
